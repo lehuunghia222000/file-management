@@ -47,9 +47,10 @@
    4. **Truy cập Postman:**
       Sau khi ứng dụng chạy, bạn có thể truy cập Postman để kiểm tra các API.
    Những Curl mẫu để test API:
+   - Note: User Admin: username: admin, password: admin123 đã được tạo sẵn trong cơ sở dữ liệu.
    - **Đăng ký người dùng:**
      ```bash
-     curl -X POST "http://localhost:8080/file-management/api/auth/register" -H "Content-Type: application/json" -d '{"username":"testuser","password":"testpass"}'
+     curl -X POST "http://localhost:8080/file-management/api/user/create" -H "Content-Type: application/json" "Authentication: Bear Token" -d '{"username":"testuser","password":"testpass123"}'
      ```
      - **Đăng nhập người dùng:**
        ```bash
