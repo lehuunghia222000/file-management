@@ -13,6 +13,16 @@
 - Maven 3.x.
 - Postgre Sql (hoặc cơ sở dữ liệu bạn đang dùng).
 
+## Tạo cơ sở dữ liệu
+1. Tạo cơ sở dữ liệu PostgreSQL:
+   ```sql
+   host: localhost
+   port: 5432
+   database: file_management
+   username: postgres
+   password: 123456
+   ```
+
 ## ⚙️ Cấu hình dự án
 1. **Clone dự án:**
    ```bash
@@ -62,5 +72,4 @@
           ```bash
           mvn test
           ```
-     
       
