@@ -33,6 +33,16 @@ public class ApplicationInitConfig {
                 userRepository.save(admin);
                 log.warn("admin user has been created with default password: admin123");
             }
+            if (userRepository.findByUserName("staff").isEmpty()) {
+                PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
+
+                Users staff = new Users();
+                staff.setUserName("staff");
+                staff.setPassword(passwordEncoder.encode("staff123"));
+                staff.setRole(Roles.STAFF);
+                userRepository.save(staff);
+                log.warn("staff user has been created with default password: staff123");
+            }
         };
     }
 }
